@@ -88,6 +88,8 @@ function Board(height, width) {
 
 
 $(document).ready(function() {
+    let newBoard;
+
     $("#submit").click(function(){
     if(!$("#m").val().match(/^\d+$/) || $("#m").val() <= 0 || $("#m").val() > 50){
       console.log("not a number m")
@@ -103,7 +105,7 @@ $(document).ready(function() {
     //let height = Math.floor(($(document).height() - navbarHeight - textHeight) / 28);
     //let width = Math.floor($(document).width() / 25);
     console.log($("#m").val())
-    let newBoard = new Board($("#m").val(), $("#n").val())//new Board(height, width)
+    newBoard = new Board($("#m").val(), $("#n").val())//new Board(height, width)
     //newBoard.initialise();    
     newBoard.createGrid(false);
 
@@ -130,7 +132,10 @@ $(document).ready(function() {
     newBoard.nodes[obsticle_id].status = "wall"
 
     console.log(newBoard)
-
+    }
+  });
+  
+  $("#startAlgorithm").click(()=>{
     astar(newBoard, null, null)
     node = newBoard["target"]
     console.log(node)
@@ -139,8 +144,7 @@ $(document).ready(function() {
     	$("#" + node["id"]).addClass("visited")
     	node = newBoard.nodes[node["previousNode"]]
     }
-    }
-  });
+  })
 });
 
 
