@@ -1,0 +1,7 @@
+#firstPart > label, input{
+    display: block;
+}
+
+#firstPart{
+    margin-bottom: 5px;
+}
