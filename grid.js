@@ -28,8 +28,6 @@ function Board(height, width) {
   
   Board.prototype.initialise = function() {
     this.createGrid();
-    //this.addEventListeners();
-    //this.toggleTutorialButtons();
   };
   
   Board.prototype.createGrid = function(withoutStartAndEnd = true) {
@@ -89,37 +87,31 @@ function Board(height, width) {
 
 $(document).ready(function() {
   let newBoard;
+  $("#score").hide()
+  $("#lScore").hide()
 
   $("#submit").click(function(){
+    $("#score").hide()
+    $("#lScore").hide()
+
     if(!$("#m").val().match(/^\d+$/) || $("#m").val() <= 0 || $("#m").val() > 50){
-      console.log("not a number m")
     }
     else if(!$("#n").val().match(/^\d+$/) || $("#n").val() <= 0 || $("#n").val() > 50){
-      console.log("not a number")
     }
     else{
-      //console.log("Loading page")
-    //let navbarHeight = $("#navbarDiv").height();
-    //console.log(navbarHeight)
-    //let textHeight = $("#mainText").height() + $("#algorithmDescriptor").height();
-    //let height = Math.floor(($(document).height() - navbarHeight - textHeight) / 28);
-    //let width = Math.floor($(document).width() / 25);
-    console.log($("#m").val())
-    newBoard = new Board($("#m").val(), $("#n").val())//new Board(height, width)
-    //newBoard.initialise();    
+      
+    newBoard = new Board($("#m").val(), $("#n").val())    
     newBoard.createGrid(false);
 
 
     // start node
     start_node_id = $("#startingPoint").val()
-    console.log(`start node: ${newBoard.nodes[start_node_id]}`)
     document.getElementById(start_node_id).className = "start"
     newBoard.start = newBoard.nodes[start_node_id]
 
 
     // end node
     end_node_id = $("#endPoint").val()
-    console.log(`target node: ${newBoard.nodes[end_node_id]}`)
     document.getElementById(end_node_id).className = "target"
     newBoard.target = newBoard.nodes[end_node_id]
     
@@ -161,7 +153,7 @@ $(document).ready(function() {
     ids = highR.split(" ");
     ids.forEach(async function(highR_id) {
       highR_id = highR_id.trim()
-      if(document.getElementById(document.getElementById(highR_id)) != null){
+      if(document.getElementById(highR_id) != null){
         document.getElementById(highR_id).className = "highR"
         newBoard.nodes[highR_id].weight = 3
       }
@@ -174,14 +166,16 @@ $(document).ready(function() {
   
   $("#startAlgorithm").click(()=>{
     heightAdjustment(newBoard)
-    astar(newBoard, null, null)
+    listaAbierta = astar(newBoard, null, null)
     node = newBoard["target"]
-    console.log(node)
     while(node !== newBoard["start"]){
     	$("#" + node["id"]).removeClass("unvisited")
     	$("#" + node["id"]).addClass("visited")
     	node = newBoard.nodes[node["previousNode"]]
     }
+    $("#lScore").show()
+    $("#score").val(newBoard.target.distance)
+    $("#score").show()
   })
   
 });

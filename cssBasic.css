@@ -2,22 +2,8 @@ body{
   padding: 10px;
 }
 
-/*.demonstration {
-  border: 2px solid green;
-}
-
-.other {
-  border: 2px solid red;
-}
-
-.otherother {
-  border: 2px solid grey;
-}*/
-
 .start{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image:url(./img/start.png);
-  /*background-color: rgb(255, 254, 106);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -32,7 +18,6 @@ body{
 }
 
 .instantshortest-path-up{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-up.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -41,7 +26,6 @@ body{
 }
 
 .shortest-path-up{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-up.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -58,7 +42,6 @@ body{
 }
 
 .instantshortest-path-down{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-down.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -67,7 +50,6 @@ body{
 }
 
 .shortest-path-down{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-down.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -84,7 +66,6 @@ body{
 }
 
 .instantshortest-path-right{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-right.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -93,7 +74,6 @@ body{
 }
 
 .shortest-path-right{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-right.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -110,7 +90,6 @@ body{
 }
 
 .instantshortest-path-left{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-left.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -119,7 +98,6 @@ body{
 }
 
 .shortest-path-left{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(triangletwo-left.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -136,7 +114,6 @@ body{
 }
 
 .instantStartTransparent{
-  /*border: 1px solid rgb(175, 216, 248);*/
   opacity: 0.5;
   background-image:url(triangletwo-right.svg);
   background-color: rgb(255, 254, 106);
@@ -146,7 +123,6 @@ body{
 }
 
 .startTransparent{
-  /*border: 1px solid rgb(175, 216, 248);*/
   opacity: 0.5;
   background-image:url(triangletwo-right.svg);
   background-color: rgb(255, 254, 106);
@@ -164,9 +140,7 @@ body{
 }
 
 .visitedStartNodeBlue {
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image:url(triangletwo-right.svg);
-  /*background-color: rgb(255, 254, 106);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -181,9 +155,7 @@ body{
 }
 
 .visitedStartNodePurple {
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image:url(triangletwo-right.svg);
-  /*background-color: rgb(255, 254, 106);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -304,7 +276,6 @@ body{
 }
 
 #actualStartButton {
-  /*color: red;*/
   background-color: none;
 }
 
@@ -406,19 +377,11 @@ body{
   font-size: 14px;
 }
 
-/*#otherText > ul li {
-  display: inline-block;
-  list-style: none;
-  padding: 10px 50px 0 0;
-}*/
-
 #board{
   border-collapse:collapse;
-  /*position: center*/
 }
 
 #mainText div {
-  /*border: 1px solid rgb(12, 53, 71);*/
   width: 25px;
   height: 25px;
   display: inline-block;
@@ -432,16 +395,7 @@ body{
   margin-right: 5px;
 }
 
-/*#tutorial {
-  position: absolute;
-  color: red;
-  height: 50px;
-  width: 200px;
-  z-index: 2;
-}*/
-
 #board td{
-  /*border: 1px solid rgb(175, 216, 248);*/
   width: 75px;
   height: 75px;
 }
@@ -454,13 +408,11 @@ body{
 .instantvisited{
   border: 1px solid rgb(175, 216, 248);
   background-color: rgba(0, 190, 218, 0.75);
-  /*background-color: rgba(178, 67, 255, 0.75);*/
 }
 
 .instantvisited.weight {
   border: 1px solid rgb(175, 216, 248);
   background-color: rgba(0, 190, 218, 0.75);
-  /*background-color: rgba(178, 67, 255, 0.75);*/
   background-image: url(weight.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -548,13 +500,11 @@ body{
 .instantvisitedobject{
   border: 1px solid rgb(175, 216, 248);
   background-color: rgba(178, 67, 255, 0.75);
-  /*background-color: rgba(0, 190, 218, 0.75);*/
 }
 
 .instantvisitedobject.weight{
   border: 1px solid rgb(175, 216, 248);
   background-color: rgba(178, 67, 255, 0.75);
-  /*background-color: rgba(0, 190, 218, 0.75);*/
   background-image: url(weight.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -562,7 +512,6 @@ body{
 }
 
 .visitedobject{
-  /*background:red*/
   border: 1px solid rgb(175, 216, 248);
   animation-name: visitedObjectAnimation;
   animation-duration: 1.5s;
@@ -575,7 +524,6 @@ body{
 }
 
 .visitedobject.weight{
-  /*background:red*/
   border: 1px solid rgb(175, 216, 248);
   background-image: url(weight.svg);
   background-position: center;
@@ -634,7 +582,6 @@ body{
 }
 
 .unvisited.weight{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image: url(weight.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -652,17 +599,14 @@ body{
 @keyframes unvisitedWeightAnimation {
   0% {
     transform: scale(.3);
-    /*background-color: rgb(12, 53, 71);*/
   }
 
   50% {
     transform: scale(1.2);
-    /*background-color: rgb(12, 53, 71);*/
   }
 
   100% {
     transform: scale(1.0);
-    /*background-color: rgb(12, 53, 71);*/
   }
 }
 
@@ -676,9 +620,7 @@ body{
 }
 
 .object{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image: url(diamond.svg);
-  /*background-color: rgb(255, 254, 106);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -693,7 +635,6 @@ body{
 }
 
 .instantobjectTransparent{
-  /*border: 1px solid rgb(175, 216, 248);*/
   opacity: 0.5;
   background-image: url(diamond.svg);
   background-color: rgb(255, 254, 106);
@@ -703,7 +644,6 @@ body{
 }
 
 .objectTransparent{
-  /*border: 1px solid rgb(175, 216, 248);*/
   opacity: 0.5;
   background-image: url(diamond.svg);
   background-color: rgb(255, 254, 106);
@@ -721,10 +661,7 @@ body{
 }
 
 .target{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-image: url(img/target.png);
-  /*background-color: rgb(255, 254, 106);*/
-  /*background-color: rgba(232, 147, 12, 0.75);*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -861,27 +798,22 @@ body{
 @keyframes specialNodes {
   0% {
     transform: scale(.3);
-    /*background-color: darkslategrey;*/
   }
 
   50% {
     transform: scale(1.2);
-    /*background-color: darkslategrey;*/
   }
 
   100% {
     transform: scale(1.0);
-    /*background-color: darkslategrey;*/
   }
 }
 
 .instantshortest-path{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-color: rgb(255, 254, 106);
 }
 
 .instantshortest-path.weight{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-color: rgb(255, 254, 106);
   background-image: url(weight.svg);
   background-position: center;
@@ -890,11 +822,7 @@ body{
 }
 
 .shortest-path{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-color: rgb(255, 254, 106);
-  /*background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;*/
   animation-name: triangletwo;
   animation-duration: 1.5s;
   animation-timing-function: linear;
@@ -906,7 +834,6 @@ body{
 }
 
 .shortest-path.weight{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background-color: rgb(255, 254, 106);
   background-image: url(weight.svg);
   background-position: center;
@@ -940,7 +867,6 @@ body{
 }
 
 .shortest-path-unweighted{
-  /*border: 1px solid rgb(175, 216, 248);*/
   background:url(spaceshiptwo-up.svg);
   background-color: rgb(255, 254, 106);
   background-position: center;
@@ -951,51 +877,38 @@ body{
 
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-black.eot');*/
-  /*src: url('../fonts/lato/lato-black.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-black.woff') format('woff'), url('../fonts/lato/lato-black.ttf') format('truetype'), url('../fonts/lato/lato-black.svg#latoblack') format('svg');*/
   font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-bold.eot');*/
-  /*src: url('../fonts/lato/lato-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bold.woff') format('woff'), url('../fonts/lato/lato-bold.ttf') format('truetype'), url('../fonts/lato/lato-bold.svg#latobold') format('svg');*/
   font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-bolditalic.eot');*/
-  /*src: url('../fonts/lato/lato-bolditalic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-bolditalic.woff') format('woff'), url('../fonts/lato/lato-bolditalic.ttf') format('truetype'), url('../fonts/lato/lato-bolditalic.svg#latobold-italic') format('svg');*/
   font-weight: bold;
   font-style: italic;
 }
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-italic.eot');*/
-  /*src: url('../fonts/lato/lato-italic.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-italic.woff') format('woff'), url('../fonts/lato/lato-italic.ttf') format('truetype'), url('../fonts/lato/lato-italic.svg#latoitalic') format('svg');*/
   font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-light.eot');*/
-  /*src: url('../fonts/lato/lato-light.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-light.woff') format('woff'), url('../fonts/lato/lato-light.ttf') format('truetype'), url('../fonts/lato/lato-light.svg#latolight') format('svg');*/
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: 'Lato';
-  /*src: url('../fonts/lato/lato-regular.eot');*/
-  /*src: url('../fonts/lato/lato-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/lato/lato-regular.woff') format('woff'), url('../fonts/lato/lato-regular.ttf') format('truetype'), url('../fonts/lato/lato-regular.svg#latoregular') format('svg');*/
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Flat-UI-Icons';
-  /*src: url('../fonts/glyphicons/flat-ui-icons-regular.eot');*/
-  /*src: url('../fonts/glyphicons/flat-ui-icons-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons/flat-ui-icons-regular.woff') format('woff'), url('../fonts/glyphicons/flat-ui-icons-regular.ttf') format('truetype'), url('../fonts/glyphicons/flat-ui-icons-regular.svg#flat-ui-icons-regular') format('svg');*/
 }
+
 [class^="fui-"],
 [class*="fui-"] {
   font-family: 'Flat-UI-Icons';
