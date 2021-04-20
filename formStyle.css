@@ -5,3 +5,26 @@
 #firstPart{
     margin-bottom: 5px;
 }
+
+#secondPart{
+    display: blocks;
+    margin-left: 20px;
+}
+
+#secondPart > label, input{
+    display: block;
+}
+
+#thirdPart{
+    display: blocks;
+    margin-left: 20px;
+}
+
+#thirdPart > label, input{
+    display: block;
+}
+
+#outer{
+    display:flex;
+}
+

@@ -88,9 +88,9 @@ function Board(height, width) {
 
 
 $(document).ready(function() {
-    let newBoard;
+  let newBoard;
 
-    $("#submit").click(function(){
+  $("#submit").click(function(){
     if(!$("#m").val().match(/^\d+$/) || $("#m").val() <= 0 || $("#m").val() > 50){
       console.log("not a number m")
     }
@@ -109,8 +109,6 @@ $(document).ready(function() {
     //newBoard.initialise();    
     newBoard.createGrid(false);
 
-    console.log(newBoard)
-
 
     // start node
     start_node_id = $("#startingPoint").val()
@@ -126,16 +124,56 @@ $(document).ready(function() {
     newBoard.target = newBoard.nodes[end_node_id]
     
     //obsticles
-    obsticle_id = "2-2"
-    document.getElementById(obsticle_id).className = "obsticle"
-    newBoard.wallsToAnimate.push(obsticle_id)
-    newBoard.nodes[obsticle_id].status = "wall"
+    obsticles=$("#obsticles").val()
+    ids = obsticles.split(" ");
+    ids.forEach(async function(obsticle_id) {
+      obsticle_id = obsticle_id.trim()
+      if(document.getElementById(obsticle_id) != null){
+        document.getElementById(obsticle_id).className = "obsticle"
+        newBoard.nodes[obsticle_id].status = "wall"
+      }
+    })
 
-    console.log(newBoard)
+    //low risk
+    lowR=$("#lowR").val()
+    ids = lowR.split(" ");
+    ids.forEach(async function(lowR_id) {
+      lowR_id = lowR_id.trim()
+      if(document.getElementById(lowR_id) != null){
+        document.getElementById(lowR_id).className = "lowR"
+        newBoard.nodes[lowR_id].weight = 1
+      }
+    })
+
+    //mid risk
+    midR=$("#midR").val()
+    ids = midR.split(" ");
+    ids.forEach(async function(midR_id) {
+      midR_id = midR_id.trim()
+      if(document.getElementById(midR_id) != null){
+        document.getElementById(midR_id).className = "midR"
+        newBoard.nodes[midR_id].weight = 2
+      }
+    })
+
+    //high risk
+    highR=$("#highR").val()
+    ids = highR.split(" ");
+    ids.forEach(async function(highR_id) {
+      highR_id = highR_id.trim()
+      if(document.getElementById(document.getElementById(highR_id)) != null){
+        document.getElementById(highR_id).className = "highR"
+        newBoard.nodes[highR_id].weight = 3
+      }
+    })
     }
+
+    onCellClick()
+
   });
   
   $("#startAlgorithm").click(()=>{
+    heightAdjustment(newBoard)
     astar(newBoard, null, null)
     node = newBoard["target"]
     console.log(node)
@@ -145,7 +183,52 @@ $(document).ready(function() {
     	node = newBoard.nodes[node["previousNode"]]
     }
   })
+  
 });
 
+function onCellClick(){
+  $('td').click(function(){
+    if(!$(this).hasClass("start") && !$(this).hasClass("target") 
+            && !$(this).hasClass("obsticle") && !$(this).hasClass("lowR")
+            && !$(this).hasClass("midR") && !$(this).hasClass("highR")){
+      if($(this).hasClass("firstAlt")){
+        $(this).removeClass("firstAlt");
+        $(this).addClass("secondAlt");
+      }
+      else if($(this).hasClass("secondAlt")){
+        $(this).removeClass("secondAlt");
+        $(this).addClass("thirdAlt");
+      }
+      else if($(this).hasClass("thirdAlt")){
+        $(this).removeClass("thirdAlt");
+        $(this).addClass("forthAlt");
+      }
+      else if($(this).hasClass("forthAlt")){
+        $(this).removeClass("forthAlt");
+      }
+      else{
+        $(this).addClass("firstAlt");
+      }
+    }
+  })
+}
+
+function heightAdjustment(newBoard){
+  height=$("#alt").val()
+  for(let node in newBoard.nodes) {
+    if(height <= 40 && $("#" + node).hasClass("forthAlt")){
+      newBoard.nodes[node].status = "wall"
+    }
+    if(height <= 30 && $("#" + node).hasClass("thirdAlt")){
+      newBoard.nodes[node].status = "wall"
+    }
+    if(height <= 20 && $("#" + node).hasClass("secondAlt")){
+      newBoard.nodes[node].status = "wall"
+    }
+    if(height <= 10 && $("#" + node).hasClass("firstAlt")){
+      newBoard.nodes[node].status = "wall"
+    }
+  }
+}
 
 

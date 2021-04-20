@@ -753,6 +753,111 @@ body{
   animation-play-state: running;
 }
 
+.lowR{
+  background-image: url(img/spaceRocks1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.midR{
+  background-image: url(img/spaceRocks2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.highR{
+  background-image: url(img/spaceRocks3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.firstAlt{
+  background-image: url(img/r1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.secondAlt{
+  background-image: url(img/r2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.thirdAlt{
+  background-image: url(img/r3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.forthAlt{
+  background-image: url(img/r4.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation-name: specialNodes;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
 @keyframes specialNodes {
   0% {
     transform: scale(.3);

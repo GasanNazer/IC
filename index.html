@@ -90,16 +90,40 @@
   <body>
     <div id="form">
       <form>
-        <div id="firstPart">
-          <label for="m">Matrix height dimentin (between 1 and 50):</label>
-          <input type="text" id="m" name="m" value="">
-          <label for="n">Matrix width dimention (between 1 and 50):</label>
-          <input type="text" id="n" name="n" value="">
-          <label for="startingPoint">Incert a valid starting point</label>
-          <input type="text" id="startingPoint" name="startingPoint" value="">
-          <label for="endPoint">Incert a valid end point</label>
-          <input type="text" id="endPoint" name="endPoint" value="">
+        <div id="outer">
+          <div id="firstPart">
+            <label for="m">Matrix height dimentin (between 1 and 50):</label>
+            <input type="text" id="m" name="m" value="5">
+            <label for="n">Matrix width dimention (between 1 and 50):</label>
+            <input type="text" id="n" name="n" value="5">
+            <label for="startingPoint">Incert a valid starting point</label>
+            <input type="text" id="startingPoint" name="startingPoint" value="0-0">
+            <label for="endPoint">Incert a valid end point</label>
+            <input type="text" id="endPoint" name="endPoint" value="2-3">
+          </div>
+          <div id="secondPart">
+            <label for="obsticles">Add the coordinates of the obsticles, separated by space</label>
+            <textarea id="obsticles" name="testa" rows="4" cols="20">1-1 1-2
+            </textarea>
+            <br>
+            <label for="alt">Height treshold</label>
+            <input type="text" id="alt" name="alt" value="50">
+          </div>
+          <div id="thirdPart">
+            <label for="lowR">Add the coordinates of the danger zones: low</label>
+            <textarea id="lowR" name="testa" rows="2" cols="20">1-0
+            </textarea>
+
+            <label for="midR">Add the coordinates of the danger zones: medium</label>
+            <textarea id="midR" name="testa" rows="2" cols="20">2-0
+            </textarea>
+
+            <label for="highR">Add the coordinates of the danger zones: high</label>
+            <textarea id="highR" name="testa" rows="2" cols="20">2-1
+            </textarea>
+          </div>
         </div>
+
         <button id="submit" type="button">Create board</button>
         <button id="startAlgorithm" type="button">Start Algorithm</button> 
       </form>
